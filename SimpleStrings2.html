@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleStrings</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background: #f8f5e5;
+        min-height: 100vh;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .sidebar {
+        background: #1f2b46;
+        width: 70px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 8px;
+        z-index: 1;
+    }
+
+    .sidebar nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header {
+        background: #a43732;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        border-bottom-left-radius: 10px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 50px;
+        z-index: 2;
+    }
+
+    .header-img {
+        height: 50px;
+        border-radius: 5px;
+        margin-right: 8px;
+        margin-bottom: 0;
+        margin-left: 0px;
+    }
+
+    .logo {
+        color: #ffd699;
+        font-size: 30px;
+        font-weight: bold;
+        margin-right: auto;
+        margin-left: 0px;
+    }
+
+    .search-box input {
+        padding: 6px 8px;
+        width: 180px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        background-color: #f8f5e5;
+        color: black;
+        margin-right: 20px;
+    }
+
+    .content {
+        margin-top: 35px;
+        margin-left: 70px;
+        padding: 20px;
+    }
+
+    .home button {
+        background: #2f3b59;
+        color: white;
+        width: 100%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 11px;
+        margin-top: 40px;
+    }
+
+    .chords button,
+    .songs button,
+    .about button,
+    .contact button {
+        background: #2f3b59;
+        color: white;
+        width: 100%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 11px;
+        margin-top: 2px;
+    }
+
+    .div {
+        background: #f0ede0;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .midle {
+        margin-top: 35px;
+        margin-left: 70px;
+        padding: 20px;
+        width: calc(100% - 85px);
+        max-width: 1200px;
+    }
+
+    h1 {
+        color: #1f2b46;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .div p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        color: #333;
+    }
+    .chord-table {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .chord-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .chord-btn {
+            background: #a43732;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .chord-btn:hover {
+            background: #1f2b46;
+        }
+</style>
+
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <a href="#" class="home"><button onclick="window.location.href='SimpleStrings.html'">Home</button></a>
+                <a href="#" class="chords"><button
+                        onclick="window.location.href='SimpleStrings2.html'">Chords</button></a>
+                <a href="#" class="songs"><button
+                        onclick="window.location.href='SimpleStrings3.html'">Songs</button></a>
+                <a href="#" class="about"><button
+                        onclick="window.location.href='SimpleStrings4.html'">About</button></a>
+                <a href="#" class="contact"><button
+                        onclick="window.location.href='SimpleStrings5.html'">Contact</button></a>
+            </nav>
+        </aside>
+        <div>
+
+            <header class="header">
+                <img class="header-img" src="cat.png" alt="logo">
+
+                <div class="logo">SimpleStrings</div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="search"></input>
+                </div>
+            </header>
+            <div class="content">
+                <div class="midle">
+                    <h1><br>Chords for Guitar</h1>
+
+                    <div class="div">
+                        <div class="chord-table">
+                            <div class="chord-row">
+                                <button class="chord-btn">C</button>
+                                <button class="chord-btn">D</button>
+                                <button class="chord-btn">E</button>
+                                <button class="chord-btn">F</button>
+                                <button class="chord-btn">G</button>
+                                <button class="chord-btn">E</button>
+                                <button class="chord-btn">F</button>
+                                <button class="chord-btn">G</button>
+                            </div>
+                            <div class="chord-row">
+                                <button class="chord-btn">C</button>
+                                <button class="chord-btn">D</button>
+                                <button class="chord-btn">E</button>
+                                <button class="chord-btn">F</button>
+                                <button class="chord-btn">G</button>
+                                <button class="chord-btn">E</button>
+                                <button class="chord-btn">F</button>
+                                <button class="chord-btn">G</button>
+                            </div>
+                            <div class="chord-row">
+                                <button class="chord-btn">C</button>
+                                <button class="chord-btn">D</button>
+                                <button class="chord-btn">E</button>
+                                <button class="chord-btn">F</button>
+                                <button class="chord-btn">G</button>
+                                <button class="chord-btn">E</button>
+                                <button class="chord-btn">F</button>
+                                <button class="chord-btn">G</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

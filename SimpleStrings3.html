@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleStrings</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background: #f8f5e5;
+        min-height: 100vh;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .sidebar {
+        background: #1f2b46;
+        width: 70px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 8px;
+        z-index: 1;
+    }
+
+    .sidebar nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header {
+        background: #a43732;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        border-bottom-left-radius: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        z-index: 2;
+    }
+
+    .header-img {
+        height: 50px;
+        border-radius: 5px;
+        margin-right: 8px;
+        margin-bottom: 0;
+    }
+
+    .logo {
+        color: #ffd699;
+        font-size: 30px;
+        font-weight: bold;
+        margin-right: auto;
+    }
+
+    .search-box input {
+        padding: 6px 8px;
+        width: 180px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        background-color: #f8f5e5;
+        color: black;
+        margin-right: 20px;
+    }
+
+    .content {
+        margin-top: 35px;
+        margin-left: 70px;
+        padding: 20px;
+    }
+
+    .home button {
+        background: #2f3b59;
+        color: white;
+        width: 100%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 11px;
+        margin-top: 40px;
+    }
+
+    .chords button,
+    .songs button,
+    .about button,
+    .contact button {
+        background: #2f3b59;
+        color: white;
+        width: 100%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 11px;
+        margin-top: 2px;
+    }
+
+    .div {
+        background: #f0ede0;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .div button {
+        background: #a43732;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 5px;
+        margin-bottom: 8px;
+        display: block;
+        width: 100%;
+        text-align: left;
+        transition: background-color 0.3s;
+    }
+
+    .div button:hover {
+        background: #8c2e2a;
+    }
+
+    .midle {
+        margin-top: 35px;
+        margin-left: 70px;
+        padding: 20px;
+        width: calc(100% - 85px);
+        max-width: 1200px;
+    }
+
+    h1 {
+        color: #1f2b46;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 1.3;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <a href="#" class="home"><button onclick="window.location.href='SimpleStrings.html'">Home</button></a>
+                <a href="#" class="chords"><button onclick="window.location.href='SimpleStrings2.html'">Chords</button></a>
+                <a href="#" class="songs"><button onclick="window.location.href='SimpleStrings3.html'">Songs</button></a>
+                <a href="#" class="about"><button onclick="window.location.href='SimpleStrings4.html'">About</button></a>
+                <a href="#" class="contact"><button onclick="window.location.href='SimpleStrings5.html'">Contact</button></a>
+            </nav>
+        </aside>
+
+        <div>
+            <header class="header">
+                <img class="header-img" src="cat.png" alt="logo">
+
+                <div class="logo">SimpleStrings</div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="search">
+                </div>
+            </header>
+
+            <div class="content">
+                <div class="midle">
+                    <h1><br>Songs</h1>
+
+                    <div class="div">
+                    <button onclick="window.location.href='Fourth-Of-July.html'">Fourth Of July – Sufjan Stevens</button>
+                    <button onclick="window.location.href='In-This-Shirt.html'">In This Shirt – The Irrepressibles</button>
+                    <button onclick="window.location.href='Enter-Sandman.html'">Enter Sandman – Metallica</button>
+                    <button onclick="window.location.href='song4.html'">Song 4 – Artist 4</button>
+                    <button onclick="window.location.href='song5.html'">Song 5 – Artist 5</button>
+                    <button onclick="window.location.href='song6.html'">Song 6 – Artist 6</button>
+                    <button onclick="window.location.href='song7.html'">Song 7 – Artist 7</button>
+                    <button onclick="window.location.href='song8.html'">Song 8 – Artist 8</button>
+                    <button onclick="window.location.href='song9.html'">Song 9 – Artist 9</button>
+                    <button onclick="window.location.href='song10.html'">Song 10 – Artist 10</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
