@@ -115,6 +115,7 @@
         padding: 15px;
         border-radius: 8px;
         margin-bottom: 15px;
+        flex: 1;
     }
 
     .div button {
@@ -131,6 +132,7 @@
         width: 100%;
         text-align: left;
         transition: background-color 0.3s;
+        text-align: center;
     }
 
     .div button:hover {
@@ -139,7 +141,7 @@
 
     .midle {
         margin-top: 35px;
-        margin-left: 70px;
+        margin-left: 30px;
         padding: 20px;
         width: calc(100% - 85px);
         max-width: 1200px;
@@ -151,6 +153,17 @@
         margin-bottom: 20px;
         font-size: 24px;
         line-height: 1.3;
+    }
+
+    .columns-container {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .column {
+        flex: 1;
+        text-align: center;
     }
 </style>
 
@@ -167,12 +180,10 @@
             </nav>
         </aside>
 
-        <div>
+        <div style="width: 100%;">
             <header class="header">
                 <img class="header-img" src="cat.png" alt="logo">
-
                 <div class="logo">SimpleStrings</div>
-
                 <div class="search-box">
                     <input type="text" placeholder="search">
                 </div>
@@ -180,21 +191,39 @@
 
             <div class="content">
                 <div class="midle">
-                    <h1><br>Songs</h1>
+                    <div class="columns-container">
+                        <div class="column">
+                            <h1>Chords</h1>
+                            <div class="div">
+                                <button onclick="window.location.href='Fourth-Of-July.html'">Fourth Of July – Sufjan Stevens</button>
+                                <button onclick="window.location.href='In-This-Shirt.html'">In This Shirt – The Irrepressibles</button>
+                                <button onclick="window.location.href='Enter-Sandman.html'">Enter Sandman – Metallica</button>
+                                <button onclick="window.location.href='I-Love-You-Like-An-Alcoholic.html'">I Love You Like An Alcoholic – The Taxpayers</button>
+                                <button onclick="window.location.href='song5.html'">Song 5 – Artist 5</button>
+                                <button onclick="window.location.href='song6.html'">Song 6 – Artist 6</button>
+                                <button onclick="window.location.href='song7.html'">Song 7 – Artist 7</button>
+                                <button onclick="window.location.href='song8.html'">Song 8 – Artist 8</button>
+                                <button onclick="window.location.href='song9.html'">Song 9 – Artist 9</button>
+                                <button onclick="window.location.href='song10.html'">Song 10 – Artist 10</button>
+                            </div>
+                        </div>
 
-                    <div class="div">
-                    <button onclick="window.location.href='Fourth-Of-July.html'">Fourth Of July – Sufjan Stevens</button>
-                    <button onclick="window.location.href='In-This-Shirt.html'">In This Shirt – The Irrepressibles</button>
-                    <button onclick="window.location.href='Enter-Sandman.html'">Enter Sandman – Metallica</button>
-                    <button onclick="window.location.href='I-Love-You-Like-An-Alcoholic.html'">I Love You Like An Alcoholic – The Taxpayers</button>
-                    <button onclick="window.location.href='song5.html'">Song 5 – Artist 5</button>
-                    <button onclick="window.location.href='song6.html'">Song 6 – Artist 6</button>
-                    <button onclick="window.location.href='song7.html'">Song 7 – Artist 7</button>
-                    <button onclick="window.location.href='song8.html'">Song 8 – Artist 8</button>
-                    <button onclick="window.location.href='song9.html'">Song 9 – Artist 9</button>
-                    <button onclick="window.location.href='song10.html'">Song 10 – Artist 10</button>
+                        <div class="column">
+                            <h1>Tabs</h1>
+                            <div class="div">
+                                <button onclick="window.location.href='Fourth-Of-July.html'">Fourth Of July – Sufjan Stevens</button>
+                                <button onclick="window.location.href='In-This-Shirt.html'">In This Shirt – The Irrepressibles</button>
+                                <button onclick="window.location.href='Enter-Sandman.html'">Enter Sandman – Metallica</button>
+                                <button onclick="window.location.href='I-Love-You-Like-An-Alcoholic.html'">I Love You Like An Alcoholic – The Taxpayers</button>
+                                <button onclick="window.location.href='song5.html'">Song 5 – Artist 5</button>
+                                <button onclick="window.location.href='song6.html'">Song 6 – Artist 6</button>
+                                <button onclick="window.location.href='song7.html'">Song 7 – Artist 7</button>
+                                <button onclick="window.location.href='song8.html'">Song 8 – Artist 8</button>
+                                <button onclick="window.location.href='song9.html'">Song 9 – Artist 9</button>
+                                <button onclick="window.location.href='song10.html'">Song 10 – Artist 10</button>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
