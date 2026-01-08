@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleStrings</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Georgia", serif;
+            background: #f8f5e5;
+        }
+        .sidebar {
+            background: #1f2b46;
+            width: 70px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 15px 8px;
+            z-index: 1;
+        }
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .home button {
+            background: #2f3b59;
+            color: white;
+            width: 100%;
+            padding: 6px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-top: 40px;
+        }
+        .chords button,
+        .songs button,
+        .about button,
+        .contact button {
+            background: #2f3b59;
+            color: white;
+            width: 100%;
+            padding: 6px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-top: 2px;
+        }
+        .header {
+            background: #a43732;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            border-bottom-left-radius: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            z-index: 2;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .header-img {
+            height: 50px;
+            border-radius: 5px;
+        }
+        .logo {
+            color: #ffd699;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .search-box input {
+            padding: 6px 8px;
+            width: 180px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            background-color: #f8f5e5;
+            color: black;
+        }
+        .main-content {
+            margin-left: 70px;
+            margin-top: 70px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .content-wrapper {
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            color: #1f2b46;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .song-text {
+            background: #f0ede0;
+            padding: 25px;
+            border-radius: 8px;
+            font-size: 17px;
+            line-height: 1.8;
+            font-family: monospace;
+        }
+        .chord {
+            color: #a43732;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .chord-tooltip {
+            position: absolute;
+            background: white;
+            border: 2px solid #1f2b46;
+            border-radius: 8px;
+            padding: 10px;
+            display: none;
+            z-index: 100;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .chord:hover .chord-tooltip {
+            display: block;
+        }
+        .chord-tooltip img {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+        .chord-name {
+            font-weight: bold;
+            color: #a43732;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .chord-line {
+            color: #a43732;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .lyric-line {
+            margin-bottom: 15px;
+        }
+        .autoscroll-box {
+            background: #a43732;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .song-audio {
+            background: #a43732;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .autoscroll-box button {
+            background: white;
+            color: #a43732;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .song-mp3 {
+            background-color: none;
+        }
+        .speed-info {
+            color: white;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <a class="home"><button onclick="window.location.href='SimpleStrings.html'">Home</button></a>
+            <a class="chords"><button onclick="window.location.href='SimpleStrings2.html'">Chords</button></a>
+            <a class="songs"><button onclick="window.location.href='SimpleStrings3.html'">Songs</button></a>
+            <a class="about"><button onclick="window.location.href='SimpleStrings4.html'">About</button></a>
+            <a class="contact"><button onclick="window.location.href='SimpleStrings5.html'">Contact</button></a>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="header-left">
+            <img class="header-img" src="cat.png" alt="logo">
+            <div class="logo">SimpleStrings</div>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Hľadať...">
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <h1>I Love You Like An Alcoholic – The Taxpayers</h1>
+            
+            <div class="autoscroll-box">
+                <button onclick="startScroll()">▶</button>
+                <button onclick="stopScroll()">⏸</button>
+                <button onclick="goFaster()">+</button>
+                <button onclick="goSlower()">-</button>
+                <div class="speed-info" id="speedText">Rýchlosť: stredná</div>
+            </div>
+            <div class="song-audio">
+                <audio controls class="song-mp3">
+                    <source src="I-Love-You-Like-An-Alcoholic.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="song-text">
+
+<div class="section">
+<div class="lyric-line">[Intro]</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span>
+</div>
+</div>
+
+<div class="section">
+<div class="chord-line">
+<span class="chord">A2<span class="chord-tooltip"><img src="a2-chord.png"><div class="chord-name">A2</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">Heavy humid night. Corner of Park and Main</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">Cast that first glance: your smile, my veins at maximum capacity</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span>
+</div>
+<div class="lyric-line">My girl, if looks gave heart attacks</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Em<span class="chord-tooltip"><img src="em-chord.png"><div class="chord-name">Em</div></span></span>
+</div>
+<div class="lyric-line">The dangerous men in the shadows were like an audience</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span>
+</div>
+<div class="lyric-line">special little shine in their eyes when they saw us walk by</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">Walked about twenty blocks talking about good bars and</div>
+<div class="chord-line">
+<span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span>
+</div>
+<div class="lyric-line">Better towns than this one. Kissed that first night, and then</div>
+<div class="chord-line">
+<span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span>
+</div>
+<div class="lyric-line">The rain opened up the sky to get...</div>
+</div>
+
+<div class="section">
+<div class="chord-line">
+<span class="chord">A2<span class="chord-tooltip"><img src="a2-chord.png"><div class="chord-name">A2</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">One last kiss - I love you like an alcoholic</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">C<span class="chord-tooltip"><img src="c-chord.png"><div class="chord-name">C</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">One last kiss - love you like a statuette</div>
+<div class="chord-line">
+<span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">One last kiss - I need you like I need a broken leg</div>
+</div>
+
+<div class="section">
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">I was getting off the late shift, attempting to recover</div>
+<div class="chord-line">
+<span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">Crumpled up the bus pass and tossed it into the gutter</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">Some handsome dark stranger</div>
+<div class="lyric-line">You were standing there on the corner</div>
+<div class="chord-line">
+<span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">You had those compelling magnetized eyes that you must have lost when you got older</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">Seven blocks in, my fingers brushed your hand; I blushed and you laughed</div>
+<div class="chord-line">
+<span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span>
+</div>
+<div class="lyric-line">I was six steps in when I fell into you</div>
+</div>
+
+<div class="section">
+<div class="chord-line">
+<span class="chord">A2<span class="chord-tooltip"><img src="a2-chord.png"><div class="chord-name">A2</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">One last kiss - I love you like a broken pot</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">C<span class="chord-tooltip"><img src="c-chord.png"><div class="chord-name">C</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">One last kiss - love you like a pack of dogs</div>
+<div class="chord-line">
+<span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">One last kiss - I need you like I need a gaping head wound</div>
+</div>
+
+<div class="section">
+<div class="chord-line">
+<span class="chord">A2<span class="chord-tooltip"><img src="a2-chord.png"><div class="chord-name">A2</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">One last kiss - I love you like an alcoholic</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">C<span class="chord-tooltip"><img src="c-chord.png"><div class="chord-name">C</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">One last kiss - love you like a negligee</div>
+<div class="chord-line">
+<span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="lyric-line">One last kiss - I need you like I need a broken leg</div>
+</div>
+
+<div class="section">
+<div class="lyric-line">[Outro]</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span>
+</div>
+<div class="chord-line">
+<span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">Am<span class="chord-tooltip"><img src="am-chord.png"><div class="chord-name">Am</div></span></span> <span class="chord">F<span class="chord-tooltip"><img src="f-chord.png"><div class="chord-name">F</div></span></span> <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span>
+</div>
+</div>
+
+</div>
+        </div>
+
+    <script>
+        let t = null;
+        let s = 2;
+        function startScroll() {
+            if (t) return;
+            t = setInterval(() => window.scrollBy(0, s), 50);
+        }
+        function stopScroll() {
+            clearInterval(t);
+            t = null;
+        }
+        function goFaster() {
+            s = Math.min(s + 1, 6);
+            updateSpeedText();
+        }
+        function goSlower() {
+            s = Math.max(s - 1, 1);
+            updateSpeedText();
+        }
+        function updateSpeedText() {
+            const texts = ["", "veľmi pomalá", "pomalá", "stredná", "rýchla", "veľmi rýchla", "prirýchla"];
+            document.getElementById("speedText").textContent = "Rýchlosť: " + texts[s];
+        }
+        document.addEventListener("keydown", e => {
+            if (e.code === "Space") {
+                e.preventDefault();
+                if (t) stopScroll(); else startScroll();
+            }
+        });
+        updateSpeedText();
+    </script>
+</body>
+</html>
