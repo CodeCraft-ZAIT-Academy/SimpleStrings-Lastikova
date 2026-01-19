@@ -5,289 +5,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SimpleStrings</title>
-</head>
-<style>
-    body {
-        margin: 0;
-        font-family: "Georgia", serif;
-        background: #f8f5e5;
-        min-height: 100vh;
-    }
-
-    .container {
-        display: flex;
-    }
-
-    .sidebar {
-        background: #1f2b46;
-        width: 70px;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        padding: 15px 8px;
-        z-index: 1;
-    }
-
-    .sidebar nav {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .home button {
-        background: #2f3b59;
-        color: white;
-        width: 100%;
-        padding: 6px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 11px;
-        margin-top: 40px;
-    }
-
-    .chords button,
-    .songs button,
-    .about button,
-    .contact button {
-        background: #2f3b59;
-        color: white;
-        width: 100%;
-        padding: 6px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 11px;
-        margin-top: 2px;
-    }
-
-    .header {
-        background: #a43732;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 15px;
-        border-bottom-left-radius: 10px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 50px;
-        z-index: 2;
-    }
-
-    .header-left {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .header-img {
-        height: 50px;
-        border-radius: 5px;
-    }
-
-    .logo {
-        color: #ffd699;
-        font-size: 30px;
-        font-weight: bold;
-    }
-
-    .search-box input {
-        padding: 6px 8px;
-        width: 180px;
-        border-radius: 6px;
-        border: none;
-        outline: none;
-        background-color: #f8f5e5;
-        color: black;
-    }
-
-    .content {
-        margin-top: 35px;
-        margin-left: 90px;
-        padding: 20px;
-        width: calc(100% - 90px);
-        box-sizing: border-box;
-    }
-
-    .midle {
-        background: #f0ede0;
-        padding: 30px;
-        border-radius: 8px;
-        font-size: 17px;
-        line-height: 1.8;
-        max-width: none;
-        width: calc(100% - 20px);
-        margin-left: 10px;
-        box-sizing: border-box;
-        margin-top: 20px;
-    }
-    .midle-welcome {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    h1 {
-        color: #1f2b46;
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 32px;
-        line-height: 1.3;
-    }
-
-    .info-box {
-        background: #f0ede0;
-        padding: 30px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-
-    .info-box h2 {
-        color: #1f2b46;
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 24px;
-    }
-
-    .info-box p {
-        font-size: 18px;
-        line-height: 1.7;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    .info-box ul,
-    .info-box ol {
-        padding-left: 25px;
-        margin-bottom: 30px;
-    }
-
-    .info-box li {
-        margin-bottom: 10px;
-        font-size: 18px;
-        line-height: 1.6;
-    }
-
-    .action-buttons {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-top: 30px;
-        justify-content: flex-end;
-    }
-
-    .action-btn {
-        background: #a43732;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        padding: 14px 28px;
-        cursor: pointer;
-        font-size: 18px;
-        transition: background 0.3s, transform 0.2s;
-        font-weight: bold;
-        min-width: 200px;
-        text-align: center;
-    }
-
-    .action-btn:hover {
-        background: #2f3b59;
-        transform: translateY(-2px);
-    }
-
-    @media (max-width: 768px) {
-        .action-buttons {
-            justify-content: center;
+    <style>
+        body {
+            margin: 0;
+            font-family: "Georgia", serif;
+            background: #f8f5e5;
+            min-height: 100vh;
         }
-        
-        .action-btn {
-            min-width: 180px;
-            padding: 12px 24px;
-            font-size: 16px;
-        }
-    }
 
-    @media (max-width: 350px) {
+        .container {
+            display: flex;
+        }
+
         .sidebar {
-            width: 45px;
-            padding: 8px 4px;
+            background: #1f2b46;
+            width: 70px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 8px;
+            z-index: 1;
         }
 
-        .sidebar button {
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .home button {
+            background: #2f3b59;
+            color: white;
+            width: 100%;
             padding: 6px;
-            font-size: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-top: 40px;
+        }
+
+        .chords button,
+        .songs button,
+        .about button,
+        .contact button {
+            background: #2f3b59;
+            color: white;
+            width: 100%;
+            padding: 6px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-top: 2px;
         }
 
         .header {
-            padding: 0 8px;
-            height: 40px;
+            background: #a43732;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            border-bottom-left-radius: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            z-index: 2;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .header-img {
-            height: 35px;
+            height: 50px;
+            border-radius: 5px;
         }
 
         .logo {
-            font-size: 18px;
+            color: #ffd699;
+            font-size: 30px;
+            font-weight: bold;
         }
 
-        .search-box {
-            display: none;
+        .search-box input {
+            padding: 6px 8px;
+            width: 180px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            background-color: #f8f5e5;
+            color: black;
         }
 
         .content {
-            margin-left: 55px;
-            padding: 8px;
-            margin-top: 25px;
-            width: calc(100% - 55px);
-        }
-
-        .midle {
-            width: calc(100% - 20px);
-            margin-left: 10px;
+            margin-top: 35px;
+            margin-left: 90px;
             padding: 20px;
-            margin-top: 10px;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .info-box {
-            padding: 20px;
-        }
-
-        .info-box h2 {
-            font-size: 20px;
-        }
-
-        .info-box p {
-            font-size: 16px;
-        }
-
-        .info-box li {
-            font-size: 16px;
-        }
-
-        .action-buttons {
-            flex-direction: column;
-            gap: 12px;
+            width: calc(100% - 90px);
+            box-sizing: border-box;
+            display: flex;
             justify-content: center;
         }
 
-        .action-btn {
+        .midle {
+            background: #f0ede0;
+            padding: 40px;
+            border-radius: 8px;
             width: 100%;
-            min-width: auto;
-            padding: 12px 20px;
-            font-size: 16px;
+            max-width: 1200px;
+            margin-top: 20px;
         }
-    }
-</style>
+
+        .page-title {
+            text-align: center;
+            color: #1f2b46;
+            font-size: 50px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a43732;
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .info-box {
+            background: #f8f5e5;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .info-title {
+            color: #1f2b46;
+            font-size: 40px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-box-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .info-list-div {
+            text-align: left;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .info-list {
+            padding-left: 25px;
+            margin-bottom: 0px;
+            display: block;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+
+        .info-list li {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .info-box-cat {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .info-box-cat img {
+            max-width: 300px;
+            height: auto;
+            margin-top: 0px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .action-btn {
+            background: #a43732;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.2s;
+            min-width: 180px;
+            text-align: center;
+        }
+
+        .action-btn:hover {
+            background: #2f3b59;
+        }
+    </style>
+</head>
 
 <body>
 
@@ -309,36 +254,45 @@
                     <div class="logo">SimpleStrings</div>
                 </div>
                 <div class="search-box">
-                    <input type="text" placeholder="Hľadať..." disabled>
+                    <input type="text" placeholder="Hľadať...">
                 </div>
             </header>
 
             <div class="content">
                 <div class="midle">
-                    <h1 class="midle-welcome">Vitaj na SimpleStrings</h1>
+                    <h1 class="page-title">Vitaj na SimpleStrings</h1>
+                    
+                    <p class="welcome-text">
+                        SimpleStrings je miesto pre začiatočníkov, ktorí sa chcú naučiť hrať na gitare. 
+                        Všetko je tu vysvetlené jednoducho a bez zbytočných komplikácií.
+                    </p>
 
                     <div class="info-box">
-                        <h2>O čom je táto stránka?</h2>
-                        <p>SimpleStrings je miesto pre začiatočníkov, ktorí sa chcú naučiť hrať na gitare. Všetko je tu
-                            vysvetlené jednoducho a bez zbytočných komplikácií.</p>
-
-
-                        <h2>Ako začať?</h2>
-                        <ol>
-                            <li>Nauč sa 3-4 základné akordy</li>
-                            <li>Vyber si jednoduchú pesničku</li>
-                            <li>Cvič pravidelne a buď trpezlivý</li>
-                            <li>Pridávaj si nové akordy a pesničky</li>
-                        </ol>
-
-                        <p>Najdôležitejšie je začať a užiť si to. Každý začínal od nuly!</p>
-
-                        <div class="action-buttons">
-                            <button class="action-btn" onclick="window.location.href='SimpleStrings2.html'">Začni s
-                                akordmi</button>
-                            <button class="action-btn" onclick="window.location.href='SimpleStrings3.html'">Pesničky pre
-                                začiatočníkov</button>
+                        <h2 class="info-title">Ako začať?</h2>
+                        <div class="info-box-content">
+                            <div class="info-list-div">
+                                <ol class="info-list">
+                                    <li>Nauč sa 3-4 základné akordy</li>
+                                    <li>Vyber si jednoduchú pesničku</li>
+                                    <li>Cvič pravidelne a buď trpezlivý</li>
+                                    <li>Pridávaj si nové akordy a pesničky</li>
+                                </ol>
+                            </div>
+                            <div class="info-box-cat">
+                                <img src="S-cat.png" alt="Mačka hrajúca na gitare">
+                            </div>
                         </div>
+                        <p class="info-text">
+                            Najdôležitejšie je začať a užiť si to. Každý začínal od nuly!
+                        </p>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn" onclick="window.location.href='SimpleStrings2.html'">
+                            Začni s akordmi
+                        </button>
+                        <button class="action-btn" onclick="window.location.href='SimpleStrings3.html'">
+                            Pesničky pre začiatočníkov
+                        </button>
                     </div>
                 </div>
             </div>

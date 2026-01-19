@@ -37,53 +37,6 @@
         gap: 15px;
     }
 
-    .header {
-        background: #a43732;
-        display: flex;
-        align-items: center;
-        padding: 0 15px;
-        border-bottom-left-radius: 10px;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        height: 50px;
-        z-index: 2;
-    }
-
-    .header-img {
-        height: 50px;
-        border-radius: 5px;
-        margin-right: 8px;
-        margin-bottom: 0;
-        margin-left: 0px;
-    }
-
-    .logo {
-        color: #ffd699;
-        font-size: 30px;
-        font-weight: bold;
-        margin-right: auto;
-        margin-left: 0px;
-    }
-
-    .search-box input {
-        padding: 6px 8px;
-        width: 180px;
-        border-radius: 6px;
-        border: none;
-        outline: none;
-        background-color: #f8f5e5;
-        color: black;
-        margin-right: 20px;
-    }
-
-    .content {
-        margin-top: 35px;
-        margin-left: 70px;
-        padding: 20px;
-    }
-
     .home button {
         background: #2f3b59;
         color: white;
@@ -111,65 +64,105 @@
         margin-top: 2px;
     }
 
-    .div {
-        background: #f0ede0;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 15px;
+    .header {
+        background: #a43732;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        border-bottom-left-radius: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        z-index: 2;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header-img {
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    .logo {
+        color: #ffd699;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .search-box input {
+        padding: 6px 8px;
+        width: 180px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        background-color: #f8f5e5;
+        color: black;
+    }
+
+    .content {
+        margin-top: 35px;
+        margin-left: 90px;
+        padding: 20px;
+        width: calc(100% - 90px);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
     }
 
     .midle {
-        margin-top: 35px;
-        margin-left: 70px;
-        padding: 20px;
-        width: calc(100% - 85px);
+        background: #f0ede0;
+        padding: 50px;
+        border-radius: 8px;
+        width: 100%;
         max-width: 1200px;
+        margin-top: 20px;
     }
 
-    h1 {
+    .page-title {
+        text-align: center;
         color: #1f2b46;
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 24px;
-        line-height: 1.3;
+        font-size: 40px;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #a43732;
     }
 
-    .div p {
-        font-size: 15px;
-        line-height: 1.5;
-        margin-bottom: 12px;
-        color: #333;
+    .chords-container {
+        background: #f8f5e5;
+        padding: 30px;
+        border-radius: 8px;
     }
-    .chord-table {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .chord-row {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .chord-btn {
-            background: #a43732;
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 80px;
-            text-align: center;
-        }
-        
-        .chord-btn:hover {
-            background: #1f2b46;
-        }
+
+    .chords-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .chord-item {
+        background: #a43732;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 20px 10px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.2s;
+    }
+
+    .chord-item:hover {
+        background: #1f2b46;
+    }
 </style>
 
 <body>
@@ -177,72 +170,62 @@
     <div class="container">
         <aside class="sidebar">
             <nav>
-                <a href="#" class="home"><button onclick="window.location.href='index.html'">Home</button></a>
-                <a href="#" class="chords"><button
-                        onclick="window.location.href='SimpleStrings2.html'">Chords</button></a>
-                <a href="#" class="songs"><button
-                        onclick="window.location.href='SimpleStrings3.html'">Songs</button></a>
-                <a href="#" class="about"><button
-                        onclick="window.location.href='SimpleStrings4.html'">About</button></a>
-                <a href="#" class="contact"><button
-                        onclick="window.location.href='SimpleStrings5.html'">Contact</button></a>
+                <a class="home"><button onclick="window.location.href='index.html'">Home</button></a>
+                <a class="chords"><button onclick="window.location.href='SimpleStrings2.html'">Chords</button></a>
+                <a class="songs"><button onclick="window.location.href='SimpleStrings3.html'">Songs</button></a>
+                <a class="about"><button onclick="window.location.href='SimpleStrings4.html'">About</button></a>
+                <a class="contact"><button onclick="window.location.href='SimpleStrings5.html'">Contact</button></a>
             </nav>
         </aside>
-        <div>
 
+        <div style="width: 100%;">
             <header class="header">
-                <img class="header-img" src="cat.png" alt="logo">
-
-                <div class="logo">SimpleStrings</div>
-
+                <div class="header-left">
+                    <img class="header-img" src="cat.png" alt="logo">
+                    <div class="logo">SimpleStrings</div>
+                </div>
                 <div class="search-box">
-                    <input type="text" placeholder="search"></input>
+                    <input type="text" placeholder="Hľadať...">
                 </div>
             </header>
+
             <div class="content">
                 <div class="midle">
-                    <h1><br>Chords for Guitar</h1>
-
-                    <div class="div">
-                        <div class="chord-table">
-                            <div class="chord-row">
-                                <button class="chord-btn">C</button>
-                                <button class="chord-btn">D</button>
-                                <button class="chord-btn">E</button>
-                                <button class="chord-btn">F</button>
-                                <button class="chord-btn">G</button>
-                                <button class="chord-btn">E</button>
-                                <button class="chord-btn">F</button>
-                                <button class="chord-btn">G</button>
-                            </div>
-                            <div class="chord-row">
-                                <button class="chord-btn">C</button>
-                                <button class="chord-btn">D</button>
-                                <button class="chord-btn">E</button>
-                                <button class="chord-btn">F</button>
-                                <button class="chord-btn">G</button>
-                                <button class="chord-btn">E</button>
-                                <button class="chord-btn">F</button>
-                                <button class="chord-btn">G</button>
-                            </div>
-                            <div class="chord-row">
-                                <button class="chord-btn">C</button>
-                                <button class="chord-btn">D</button>
-                                <button class="chord-btn">E</button>
-                                <button class="chord-btn">F</button>
-                                <button class="chord-btn">G</button>
-                                <button class="chord-btn">E</button>
-                                <button class="chord-btn">F</button>
-                                <button class="chord-btn">G</button>
-                            </div>
+                    <h1 class="page-title">Guitar Chords</h1>
+                    
+                    <div class="chords-container">
+                        <div class="chords-grid">
+                            <div class="chord-item">C</div>
+                            <div class="chord-item">D</div>
+                            <div class="chord-item">E</div>
+                            <div class="chord-item">F</div>
+                            <div class="chord-item">G</div>
+                            <div class="chord-item">A</div>
+                            <div class="chord-item">B</div>
+                            <div class="chord-item">C</div>
+                            <div class="chord-item">D</div>
+                            <div class="chord-item">E</div>
+                            <div class="chord-item">F</div>
+                            <div class="chord-item">G</div>
+                            <div class="chord-item">A</div>
+                            <div class="chord-item">B</div>
+                            <div class="chord-item">C</div>
+                            <div class="chord-item">D</div>
+                            <div class="chord-item">E</div>
+                            <div class="chord-item">F</div>
+                            <div class="chord-item">G</div>
+                            <div class="chord-item">A</div>
+                            <div class="chord-item">B</div>
+                            <div class="chord-item">C</div>
+                            <div class="chord-item">D</div>
+                            <div class="chord-item">E</div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
 </body>
 
 </html>
