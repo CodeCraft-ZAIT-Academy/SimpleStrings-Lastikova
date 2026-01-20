@@ -147,6 +147,10 @@
             flex-wrap: wrap;
         }
 
+        .info-box-content.reverse {
+            flex-direction: row-reverse;
+        }
+
         .about-photo {
             flex-shrink: 0;
             width: 300px;
@@ -181,6 +185,21 @@
         .about-highlight {
             color: #a43732;
             font-weight: bold;
+        }
+
+        .info-box-cat {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .info-box-cat img {
+            max-width: 300px;
+            height: auto;
+            margin-top: 0px;
         }
     </style>
 </head>
@@ -228,14 +247,19 @@
                     </div>
 
                     <div class="info-box">
-                        <div class="about-text-content">
-                            <h2 class="section-title">Prečo SimpleStrings?</h2>
-                            <p class="info-text">
-                                Aplikácia SimpleStrings vznikla preto, že som mala problém s učením sa nôt. Boli pre mňa zložité a ťažko sa pamätali. Neskôr som začala používať akordy a taby, ktoré mi pomohli lepšie pochopiť hru na gitare a uľahčili mi učenie.
-                            </p>
-                            <p class="info-text">
-                                Rozhodla som sa preto vytvoriť aplikáciu, ktorá pomôže ľuďom s rovnakým problémom, aký som mala ja.
-                            </p>
+                        <div class="info-box-content">
+                            <div class="about-text-content">
+                                <h2 class="section-title">Prečo SimpleStrings?</h2>
+                                <p class="info-text">
+                                    Aplikácia SimpleStrings vznikla preto, že som mala problém s učením sa nôt. Boli pre mňa zložité a ťažko sa pamätali. Neskôr som začala používať akordy a taby, ktoré mi pomohli lepšie pochopiť hru na gitare a uľahčili mi učenie.
+                                </p>
+                                <p class="info-text">
+                                    Rozhodla som sa preto vytvoriť aplikáciu, ktorá pomôže ľuďom s rovnakým problémom, aký som mala ja.
+                                </p>
+                            </div>
+                            <div class="info-box-cat">
+                                <img src="C-cat.png" alt="Gitara">
+                            </div>
                         </div>
                     </div>
                 </div>
