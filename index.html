@@ -231,6 +231,198 @@
         .action-btn:hover {
             background: #2f3b59;
         }
+
+        @media (max-width: 1024px) {
+            .midle {
+                padding: 30px;
+            }
+            
+            .page-title {
+                font-size: 40px;
+            }
+            
+            .info-title {
+                font-size: 32px;
+            }
+            
+            .info-box-content {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 10px;
+                flex-direction: row;
+            }
+            
+            .sidebar nav {
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+                width: 100%;
+            }
+            
+            .home button, .chords button, .songs button, .about button, .contact button {
+                margin-top: 0;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+            
+            .container {
+                flex-direction: column;
+            }
+            
+            .content {
+                margin-left: 0;
+                margin-top: 20px;
+                width: 100%;
+                padding: 15px;
+            }
+            
+            .header {
+                position: relative;
+                border-radius: 0;
+                padding: 10px 15px;
+            }
+            
+            .header-left {
+                flex: 1;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+            
+            /* Skrytie vyhľadávacieho poľa */
+            .search-box {
+                display: none;
+            }
+            
+            .page-title {
+                font-size: 32px;
+                margin-top: 0;
+            }
+            
+            .midle {
+                padding: 25px;
+                margin-top: 0;
+            }
+            
+            .info-title {
+                font-size: 28px;
+            }
+            
+            .info-list {
+                margin-left: 20px;
+                margin-top: 20px;
+            }
+            
+            .info-list li {
+                font-size: 18px;
+            }
+            
+            .info-box-cat img {
+                max-width: 250px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .action-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar nav {
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+            
+            .home button, .chords button, .songs button, .about button, .contact button {
+                padding: 6px 8px;
+                font-size: 11px;
+                flex: 1;
+                min-width: 70px;
+            }
+            
+            .header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+                gap: 10px;
+            }
+            
+            .header-left {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .page-title {
+                font-size: 26px;
+            }
+            
+            .welcome-text {
+                font-size: 16px;
+            }
+            
+            .info-title {
+                font-size: 24px;
+            }
+            
+            .info-box {
+                padding: 20px;
+            }
+            
+            .info-list {
+                margin-left: 10px;
+                margin-top: 15px;
+                padding-left: 15px;
+            }
+            
+            .info-list li {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            
+            .info-box-cat img {
+                max-width: 200px;
+            }
+            
+            .action-btn {
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .logo {
+                font-size: 20px;
+            }
+            
+            .header-img {
+                height: 40px;
+            }
+            
+            .page-title {
+                font-size: 22px;
+            }
+            
+            .info-title {
+                font-size: 20px;
+            }
+            
+            .midle {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 
