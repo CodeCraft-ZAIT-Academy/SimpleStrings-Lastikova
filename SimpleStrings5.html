@@ -44,7 +44,9 @@
                                 <div class="contact-icon">✉️</div>
                                 <div class="contact-details">
                                     <span class="contact-label">E-mail</span>
-                                    <a href="mailto:alicalastikova12@gmail.com?subject=Dotaz z SimpleStrings&body=Dobrý deň," class="email-link">alicalastikova12@gmail.com</a>
+                                    <a href="mailto:alicalastikova12@gmail.com?subject=SimpleStrings Contact" class="email-link">
+                                        alicalastikova12@gmail.com
+                                    </a>
                                 </div>
                             </div>
 
@@ -52,7 +54,9 @@
                                 <div class="contact-icon">📞</div>
                                 <div class="contact-details">
                                     <span class="contact-label">Telefón</span>
-                                    <span class="contact-value">+421 940 581 301</span>
+                                    <a href="tel:+421940581301" class="phone-link">
+                                        +421 940 581 301
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -61,13 +65,13 @@
                             <h2 class="section-title">Formulár pre pripomienky</h2>
                             
                             <div class="form-group">
-                                <label class="form-label" for="name">Meno</label>
-                                <input type="text" id="name" class="form-input" placeholder="Zadajte vaše meno">
+                                <label class="form-label" for="name">Meno *</label>
+                                <input type="text" id="name" class="form-input" placeholder="Zadajte vaše meno" required>
                             </div>
 
                             <div class="form-group">
-                                <label class="form-label" for="email">E-mail</label>
-                                <input type="email" id="email" class="form-input" placeholder="Zadajte váš e-mail">
+                                <label class="form-label" for="email">E-mail *</label>
+                                <input type="email" id="email" class="form-input" placeholder="Zadajte váš e-mail" required>
                             </div>
 
                             <div class="form-group">
@@ -76,17 +80,116 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="form-label" for="message">Správa</label>
-                                <textarea id="message" class="form-textarea" placeholder="Napíšte vašu správu..."></textarea>
+                                <label class="form-label" for="message">Správa *</label>
+                                <textarea id="message" class="form-textarea" placeholder="Napíšte vašu správu..." required></textarea>
                             </div>
 
-                            <button class="submit-btn">Odoslať správu</button>
+                            <button class="submit-btn" id="submitForm">Odoslať správu</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="notification" class="notification"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const songRequestInput = document.getElementById('songRequest');
+            const messageInput = document.getElementById('message');
+            const submitBtn = document.getElementById('submitForm');
+            const notification = document.getElementById('notification');
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            function showNotification(message, isError = false) {
+                notification.textContent = message;
+                notification.className = 'notification' + (isError ? ' error' : '');
+                notification.classList.add('show');
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 5000);
+            }
+            function handleSubmit(event) {
+                event.preventDefault();
+                
+                if (!nameInput.value.trim()) {
+                    showNotification('Prosím, zadajte vaše meno.', true);
+                    nameInput.focus();
+                    return;
+                }
+                
+                if (!emailInput.value.trim()) {
+                    showNotification('Prosím, zadajte váš e-mail.', true);
+                    emailInput.focus();
+                    return;
+                }
+                
+                if (!isValidEmail(emailInput.value)) {
+                    showNotification('Prosím, zadajte platný e-mail.', true);
+                    emailInput.focus();
+                    return;
+                }
+                
+                if (!messageInput.value.trim()) {
+                    showNotification('Prosím, napíšte správu.', true);
+                    messageInput.focus();
+                    return;
+                }
+                
+                const subject = `SimpleStrings: ${nameInput.value}${songRequestInput.value ? ` - ${songRequestInput.value}` : ''}`;
+                let body = `Meno: ${nameInput.value}\n`;
+                body += `E-mail: ${emailInput.value}\n`;
+                
+                if (songRequestInput.value.trim()) {
+                    body += `Žiadosť o pieseň: ${songRequestInput.value}\n`;
+                }
+                
+                body += `\nSpráva:\n${messageInput.value}`;
+                
+                const encodedSubject = encodeURIComponent(subject);
+                const encodedBody = encodeURIComponent(body);
+                
+                const mailtoLink = `mailto:alicalastikova12@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+                
+                const link = document.createElement('a');
+                link.href = mailtoLink;
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                nameInput.value = '';
+                emailInput.value = '';
+                songRequestInput.value = '';
+                messageInput.value = '';
+                
+                showNotification('Ďakujeme za vašu správu! Emailový klient sa otvára...');
+            }
+            submitBtn.addEventListener('click', handleSubmit);
+            form.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' && !event.target.matches('textarea')) {
+                    event.preventDefault();
+                    handleSubmit(event);
+                }
+            });
+            const emailLink = document.querySelector('.email-link');
+            if (emailLink) {
+                emailLink.title = "Kliknite pre odoslanie emailu";
+            }
+            
+            const phoneLink = document.querySelector('.phone-link');
+            if (phoneLink) {
+                phoneLink.title = "Kliknite pre zavolanie";
+            }
+        });
+    </script>
 
 </body>
 
