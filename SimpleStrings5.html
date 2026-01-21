@@ -201,6 +201,19 @@
             line-height: 1.5;
         }
 
+        /* Nový štýl pre e-mail odkaz */
+        .email-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        .email-link:hover {
+            color: #a43732;
+            text-decoration: underline;
+        }
+
         .form-group {
             margin-bottom: 20px;
         }
@@ -293,7 +306,7 @@
                                 <div class="contact-icon">✉️</div>
                                 <div class="contact-details">
                                     <span class="contact-label">E-mail</span>
-                                    <span class="contact-value">alica@simplestrings.sk</span>
+                                    <a href="mailto:alicalastikova12@gmail.com" class="email-link">alicalastikova12@gmail.com</a>
                                 </div>
                             </div>
 
