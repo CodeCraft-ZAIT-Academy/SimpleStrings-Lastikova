@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
             font-family: "Georgia", serif;
             background: #f8f5e5;
         }
+
         .sidebar {
             background: #1f2b46;
             width: 70px;
@@ -20,11 +22,13 @@
             padding: 15px 8px;
             z-index: 1;
         }
+
         .sidebar nav {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
+
         .home button {
             background: #2f3b59;
             color: white;
@@ -36,6 +40,7 @@
             font-size: 11px;
             margin-top: 40px;
         }
+
         .chords button,
         .songs button,
         .about button,
@@ -50,6 +55,7 @@
             font-size: 11px;
             margin-top: 2px;
         }
+
         .header {
             background: #a43732;
             display: flex;
@@ -64,20 +70,24 @@
             height: 50px;
             z-index: 2;
         }
+
         .header-left {
             display: flex;
             align-items: center;
             gap: 8px;
         }
+
         .header-img {
             height: 50px;
             border-radius: 5px;
         }
+
         .logo {
             color: #ffd699;
             font-size: 30px;
             font-weight: bold;
         }
+
         .search-box input {
             padding: 6px 8px;
             width: 180px;
@@ -87,6 +97,7 @@
             background-color: #f8f5e5;
             color: black;
         }
+
         .main-content {
             margin-left: 70px;
             margin-top: 70px;
@@ -94,15 +105,18 @@
             display: flex;
             justify-content: center;
         }
+
         .content-wrapper {
             max-width: 800px;
             width: 100%;
         }
+
         h1 {
             color: #1f2b46;
             margin-bottom: 20px;
             text-align: center;
         }
+
         .song-text {
             background: #f0ede0;
             padding: 25px;
@@ -111,6 +125,7 @@
             line-height: 1.8;
             font-family: monospace;
         }
+
         .chord {
             color: #a43732;
             font-weight: bold;
@@ -119,6 +134,7 @@
             cursor: pointer;
             margin: 0 5px;
         }
+
         .chord-tooltip {
             position: absolute;
             background: white;
@@ -131,31 +147,38 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
         .chord:hover .chord-tooltip {
             display: block;
         }
+
         .chord-tooltip img {
             width: 100px;
             height: auto;
             display: block;
         }
+
         .chord-name {
             font-weight: bold;
             color: #a43732;
             text-align: center;
             margin-top: 5px;
         }
+
         .section {
             margin-bottom: 25px;
         }
+
         .chord-line {
             color: #a43732;
             font-weight: bold;
             margin-bottom: 5px;
         }
+
         .lyric-line {
             margin-bottom: 15px;
         }
+
         .autoscroll-box {
             background: #a43732;
             padding: 10px;
@@ -163,6 +186,7 @@
             margin-bottom: 20px;
             text-align: center;
         }
+
         .song-audio {
             background: #a43732;
             padding: 10px;
@@ -170,6 +194,7 @@
             margin-bottom: 20px;
             text-align: center;
         }
+
         .autoscroll-box button {
             background: white;
             color: #a43732;
@@ -180,15 +205,18 @@
             cursor: pointer;
             font-weight: bold;
         }
+
         .song-mp3 {
             background-color: none;
         }
+
         .speed-info {
             color: white;
             margin-top: 5px;
         }
     </style>
 </head>
+
 <body>
     <div class="sidebar">
         <nav>
@@ -213,7 +241,7 @@
     <div class="main-content">
         <div class="content-wrapper">
             <h1>In This Shirt – The Irrepressibles</h1>
-            
+
             <div class="autoscroll-box">
                 <button onclick="startScroll()">▶</button>
                 <button onclick="stopScroll()">⏸</button>
@@ -227,219 +255,406 @@
                 </audio>
             </div>
             <div class="song-text">
-<div class="section">
-<div class="chord-line">
-    <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>         <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">I am lost in a rainbow</div>
-<div class="chord-line">
-      <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>          <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Now a rainbow is gone</div>
-<div class="chord-line">
-    <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>            <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">Overcast by your shadow</div>
-<div class="chord-line">
-       <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>           <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">As our worlds move on</div>
+                <div class="section">
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">I am lost in a rainbow</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Now a rainbow is gone</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Overcast by your shadow</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">As our worlds move on</div>
 
-<div class="chord-line">
-        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>           <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">In this shirt I can be you</div>
-<div class="chord-line">
-      <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>              <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">To be near you for a while</div>
-<div class="chord-line">
-        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>           <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">In this shirt I can be you</div>
-<div class="chord-line">
-      <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>              <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">To be near you for a while</div>
-</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">In this shirt I can be you</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">To be near you for a while</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">In this shirt I can be you</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">To be near you for a while</div>
+                </div>
 
-<div class="section">
-<div class="chord-line">
-          <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>              <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">There's a crane knocking down</div>
-<div class="chord-line">
-          <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>              <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">All those things that we were</div>
-<div class="chord-line">
-    <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>          <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">I awake in the night to</div>
-<div class="chord-line">
-         <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>          <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Hear the engines purr</div>
+                <div class="section">
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">There's a crane knocking down</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">All those things that we were</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">I awake in the night to</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Hear the engines purr</div>
 
-<div class="chord-line">
-          <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>             <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">There's a pain, it does ripple</div>
-<div class="chord-line">
-           <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>               <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Through my frame, makes me lame</div>
-<div class="chord-line">
-          <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>           <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">There's a thorn in my side</div>
-<div class="chord-line">
-         <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>               <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">It's the shame, it's the pride</div>
-</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">There's a pain, it does ripple</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Through my frame, makes me lame</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">There's a thorn in my side</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">It's the shame, it's the pride</div>
+                </div>
 
-<div class="section">
-<div class="chord-line">
-           <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>             <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">Of you and me ever-changing</div>
-<div class="chord-line">
-          <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>            <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Moving on now, moving fast</div>
-<div class="chord-line">
-         <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>             <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">And this touch must be wanting</div>
-<div class="chord-line">
-       <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>            <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Must become free to act</div>
+                <div class="section">
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Of you and me ever-changing</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Moving on now, moving fast</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">And this touch must be wanting</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Must become free to act</div>
 
-<div class="chord-line">
-       <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>             <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">But I need, Jake to tell you</div>
-<div class="chord-line">
-       <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>                  <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">That I love you, it never rests</div>
-<div class="chord-line">
-      <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>     <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span>       <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">And I bled, every day now</div>
-<div class="chord-line">
-      <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>           <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">For a year, for a year</div>
-</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">But I need, Jake to tell you</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">That I love you, it never rests</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png">
+                                <div class="chord-name">E</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">And I bled, every day now</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">For a year, for a year</div>
+                </div>
 
-<div class="section">
-<div class="chord-line">
-      <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>          <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">I did send you a note</div>
-<div class="chord-line">
-       <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>           <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">On the wind for to read</div>
-<div class="chord-line">
-      <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>             <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">Our names there together</div>
-<div class="chord-line">
-          <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>              <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Must have fallen like a seed</div>
+                <div class="section">
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">I did send you a note</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">On the wind for to read</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Our names there together</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Must have fallen like a seed</div>
 
-<div class="chord-line">
-       <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>      <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span>      <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">To the depths of the soil</div>
-<div class="chord-line">
-        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>           <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Buried deep in the ground</div>
-<div class="chord-line">
-       <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>    <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span>     <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">On the wind I can hear you</div>
-<div class="chord-line">
-        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>               <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Call my name, held the sound</div>
-<div class="lyric-line">I am lost</div>
-</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png">
+                                <div class="chord-name">E</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">To the depths of the soil</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Buried deep in the ground</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png">
+                                <div class="chord-name">E</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">On the wind I can hear you</div>
+                    <div class="chord-line">
+                        <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Call my name, held the sound</div>
+                    <div class="lyric-line">I am lost</div>
+                </div>
 
-<div class="section">
-<div class="chord-line">
-      <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>           <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">I am lost in a rainbow</div>
-<div class="chord-line">
-<span style="margin-left: 20px;"><span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span></span>     <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>           <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Now a rainbow is gone</div>
-<div class="chord-line">
-      <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>           <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">I am lost in a rainbow</div>
-<div class="chord-line">
-<span style="margin-left: 20px;"><span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span></span>     <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>           <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">Now a rainbow is gone</div>
+                <div class="section">
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">I am lost in a rainbow</div>
+                    <div class="chord-line">
+                        <span style="margin-left: 20px;"><span class="chord">D<span class="chord-tooltip"><img
+                                        src="d-chord.png">
+                                    <div class="chord-name">D</div>
+                                </span></span></span> <span class="chord">A<span class="chord-tooltip"><img
+                                    src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Now a rainbow is gone</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">I am lost in a rainbow</div>
+                    <div class="chord-line">
+                        <span style="margin-left: 20px;"><span class="chord">E<span class="chord-tooltip"><img
+                                        src="e-chord.png">
+                                    <div class="chord-name">E</div>
+                                </span></span></span> <span class="chord">A<span class="chord-tooltip"><img
+                                    src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">Now a rainbow is gone</div>
 
-<div class="chord-line">
-      <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>    <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span>     <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">I am lost, I am lost</div>
-<div class="chord-line">
-<span style="margin-left: 20px;"><span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span></span>     <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>          <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png"><div class="chord-name">C#m</div></span></span>
-</div>
-<div class="lyric-line">I am lost, I am lost</div>
-<div class="chord-line">
-      <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png"><div class="chord-name">D</div></span></span>      <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span>  <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png"><div class="chord-name">F#m</div></span></span>
-</div>
-<div class="lyric-line">I am lost</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png">
+                                <div class="chord-name">E</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">I am lost, I am lost</div>
+                    <div class="chord-line">
+                        <span style="margin-left: 20px;"><span class="chord">E<span class="chord-tooltip"><img
+                                        src="e-chord.png">
+                                    <div class="chord-name">E</div>
+                                </span></span></span> <span class="chord">A<span class="chord-tooltip"><img
+                                    src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">C#m<span class="chord-tooltip"><img src="c#m-chord.png">
+                                <div class="chord-name">C#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">I am lost, I am lost</div>
+                    <div class="chord-line">
+                        <span class="chord">D<span class="chord-tooltip"><img src="d-chord.png">
+                                <div class="chord-name">D</div>
+                            </span></span> <span class="chord">E<span class="chord-tooltip"><img src="e-chord.png">
+                                <div class="chord-name">E</div>
+                            </span></span> <span class="chord">F#m<span class="chord-tooltip"><img src="f#m-chord.png">
+                                <div class="chord-name">F#m</div>
+                            </span></span>
+                    </div>
+                    <div class="lyric-line">I am lost</div>
 
-<div class="chord-line">
-<span style="margin-left: 20px;"><span class="chord">E<span class="chord-tooltip"><img src="e-chord.png"><div class="chord-name">E</div></span></span></span>  <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>      <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png"><div class="chord-name">A</div></span></span>
-</div>
-</div>
+                    <div class="chord-line">
+                        <span style="margin-left: 20px;"><span class="chord">E<span class="chord-tooltip"><img
+                                        src="e-chord.png">
+                                    <div class="chord-name">E</div>
+                                </span></span></span> <span class="chord">A<span class="chord-tooltip"><img
+                                    src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span> <span class="chord">A<span class="chord-tooltip"><img src="a-chord.png">
+                                <div class="chord-name">A</div>
+                            </span></span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script>
-        let t = null;
-        let s = 2;
-        function startScroll() {
-            if (t) return;
-            t = setInterval(() => window.scrollBy(0, s), 50);
-        }
-        function stopScroll() {
-            clearInterval(t);
-            t = null;
-        }
-        function goFaster() {
-            s = Math.min(s + 1, 6);
-            updateSpeedText();
-        }
-        function goSlower() {
-            s = Math.max(s - 1, 1);
-            updateSpeedText();
-        }
-        function updateSpeedText() {
-            const texts = ["", "veľmi pomalá", "pomalá", "stredná", "rýchla", "veľmi rýchla", "prirýchla"];
-            document.getElementById("speedText").textContent = "Rýchlosť: " + texts[s];
-        }
-        document.addEventListener("keydown", e => {
-            if (e.code === "Space") {
-                e.preventDefault();
-                if (t) stopScroll(); else startScroll();
+        <script>
+            let t = null;
+            let s = 2;
+            function startScroll() {
+                if (t) return;
+                t = setInterval(() => window.scrollBy(0, s), 50);
             }
-        });
-        updateSpeedText();
-    </script>
+            function stopScroll() {
+                clearInterval(t);
+                t = null;
+            }
+            function goFaster() {
+                s = Math.min(s + 1, 6);
+                updateSpeedText();
+            }
+            function goSlower() {
+                s = Math.max(s - 1, 1);
+                updateSpeedText();
+            }
+            function updateSpeedText() {
+                const texts = ["", "veľmi pomalá", "pomalá", "stredná", "rýchla", "veľmi rýchla", "prirýchla"];
+                document.getElementById("speedText").textContent = "Rýchlosť: " + texts[s];
+            }
+            document.addEventListener("keydown", e => {
+                if (e.code === "Space") {
+                    e.preventDefault();
+                    if (t) stopScroll(); else startScroll();
+                }
+            });
+            updateSpeedText();
+        </script>
 </body>
+
 </html>
